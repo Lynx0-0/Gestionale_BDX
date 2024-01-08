@@ -1,0 +1,75 @@
+
+Cognome: IPPOLITO
+Nome: CLARA
+Codice Fiscale: PPLCLR84C50A518I
+Status: Inserito
+
+Cognome: IPPOLITO
+Nome: ERALDO
+Codice Fiscale: PPLRLD58T20I171V
+Status: Inserito
+
+Cognome: MODOLO
+Nome: ANDREA
+Codice Fiscale: MDLNDR71H09L219A
+Status: Inserito
+
+Cognome: MAGNETTI
+Nome: SIMONA
+Codice Fiscale: MGNSMN68T41L219Q
+Status: Inserito
+
+Cognome: PORPORATO
+Nome: VILMO FRANCESCO
+Codice Fiscale: PRPVMF55P05L219J
+Status: Inserito
+
+Cognome: CAVALLETTO
+Nome: ANDREA
+Codice Fiscale: CVLNDR75A13F205R
+Status: Inserito
+
+Cognome: FRANCO
+Nome: ALBERTO
+Codice Fiscale: FRNLRT63E20L219A
+Status: Inserito
+
+Cognome: MUSTO
+Nome: NINO
+Codice Fiscale: MSTNNI64R23L219J
+Status: Inserito
+
+Cognome: TAMAGNONE
+Nome: LUISELLA
+Codice Fiscale: TMGLLL67P59L219A
+Status: Inserito
+
+Cognome: GIRONDI
+Nome: CECILIA
+Codice Fiscale: GRNCCL82D63L219T
+Status: Inserito
+
+Cognome: RIBET
+Nome: ANTONELLA
+Codice Fiscale: RBTNNL65T47G805E
+Status: Inserito
+
+Cognome: NICEFORO
+Nome: SARA
+Codice Fiscale: NCFSRA88M49B791C
+Status: Inserito
+
+Cognome: CALCIA
+Nome: ANDREINA
+Codice Fiscale: CLCNRN67B43L219W
+Status: Inserito
+
+Cognome: CALCIA
+Nome: GIUSEPPE
+Codice Fiscale: CLCGPP36H12L219P
+Status: Inserito
+
+Cognome: FORTINI
+Nome: DEBORAH
+Codice Fiscale: FRTDRH70R43L219G
+Status: Inserito

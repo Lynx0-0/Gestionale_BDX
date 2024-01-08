@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BDX Management</title>
+    <link rel='stylesheet'
+        href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="homecss.css">
+
+    <script>
+        function showRegistration() {
+            document.getElementById('login-container').style.display = 'none';
+            document.getElementById('registration-container').style.display = 'block';
+        }
+
+        function showLogin() {
+            document.getElementById('login-container').style.display = 'block';
+            document.getElementById('registration-container').style.display = 'none';
+        }
+    </script>
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul class="navbar-items flexbox-col">
+            <li class="navbar-logo flexbox-left">
+                <a class="navbar-item-inner flexbox" href="Home.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                        viewBox="0 0 1438.88 1819.54">
+                        <polygon points="925.79 318.48 830.56 0 183.51 1384.12 510.41 1178.46 925.79 318.48" />
+                        <polygon
+                            points="1438.88 1663.28 1126.35 948.08 111.98 1586.26 0 1819.54 1020.91 1250.57 1123.78 1471.02 783.64 1663.28 1438.88 1663.28" />
+                    </svg>
+                </a>
+            </li>
+            <li class="navbar-item flexbox-left">
+                <a class="navbar-item-inner flexbox-left" href="Home.html">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <span class="material-symbols-outlined">Home</span>
+                    </div>
+                    <span class="link-text">Home</span>
+                </a>
+            </li>
+            <li class="navbar-item flexbox-left">
+                <a class="navbar-item-inner flexbox-left" href="Upload.html">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <span class="material-symbols-outlined">upload</span>
+                    </div>
+                    <span class="link-text">Upload</span>
+                </a>
+            </li>
+            <li class="navbar-item flexbox-left">
+                <a class="navbar-item-inner flexbox-left" href="Download.html">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <span class="material-symbols-outlined">Download</span>
+                    </div>
+                    <span class="link-text">Download</span>
+                </a>
+            </li>
+            <li class="navbar-item flexbox-left">
+                <a class="navbar-item-inner flexbox-left" href="Data_check.html">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <span class="material-symbols-outlined">data_check</span>
+                    </div>
+                    <span class="link-text">data check</span>
+                </a>
+            </li>
+            <li class="navbar-item flexbox-left">
+                <a class="navbar-item-inner flexbox-left" href="People list.html">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <span class="material-symbols-outlined">patient_list</span>
+                    </div>
+                    <span class="link-text">People list</span>
+                </a>
+            </li>
+            <li class="navbar-item flexbox-left">
+                <a class="navbar-item-inner flexbox-left" href="/GestionaleBDX/ListaAccountSevlet">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <span class="material-symbols-outlined">supervisor_account</span>
+                    </div>
+                    <span class="link-text">Account list</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <main id="main" class="flexbox-row">
+
+
+
+        <div>
+            <h2>Allinea Tabelle</h2>
+            <form id="formAzione" action="/GestionaleBDX/GestioneRichiesteServlet" method="post">
+                <label for="nomeFileAllinea">Nome Tabella da Controllare:</label>
+                <input type="text" id="nomeFileAllinea" name="nomeFile" placeholder="Inserisci il nome tabella"><br><br>
+                <label for="nomeTabellaAllinea">Nome Tabella di Confronto:</label>
+                <input type="text" id="nomeTabellaAllinea" name="nomeTabella"
+                    placeholder="Inserisci il nome tabella"><br><br>
+                <input type="hidden" name="azione" value="allinea">
+                <button type="submit">Allinea</button>
+            </form>
+        </div>
+
+
+        <div>
+            <input type="checkbox" id="active">
+            <label for="active" class="menu-btn"><span></span></label>
+            <label for="active" class="close"></label>
+            <div class="wrapper">
+                <div id="login-container" class="login-container">
+                    <h2>Login</h2>
+                    <form id="formLogin" action="javascript:attemptLogin()">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <button type="submit">Login</button>
+                        <p>Se non hai un account clicca <a href="#" onclick="showRegistration()">qui per
+                                registrarti</a>.</p>
+                    </form>
+                </div>
+
+                <div id="user-container" class="login-container">
+                    <p id="user-email"></p>
+                    <button onclick="logout()">Esci</button>
+                </div>
+
+                <div id="registration-container" class="login-container" style="display: none;">
+                    <h2>Registrazione</h2>
+                    <form id="formRegistrazione" action="/GestionaleBDX/RegistrationServlet" method="post">
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="password" name="verifyPassword" placeholder="Verifica Password" required>
+                        <button type="submit">Registrati</button>
+                        <p>Hai già un account? <a href="#" onclick="showLogin()">Accedi qui</a>.</p>
+                    </form>
+                </div>
+            </div>
+
+            <script>
+                // Qui aggiungi i tuoi script per attemptLogin, logout, showRegistration, showLogin
+            </script>
+
+        </div>
+        </div>
+    </main>
+
+    <!-- partial -->
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Aggiungi qui altre funzioni che devono essere eseguite al caricamento
+            checkUserLogin();
+        });
+
+        function attemptLogin() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            fetch('/GestionaleBDX/LoginServlet', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // Se il login ha successo, salva l'email in localStorage e aggiorna l'interfaccia
+                    localStorage.setItem('userEmail', email);
+                    updateLoginStatus();
+                })
+                .catch(error => {
+                    console.error('Login failed:', error);
+                });
+        }
+
+        function updateLoginStatus() {
+            const userEmail = localStorage.getItem('userEmail');
+            if (userEmail) {
+                document.getElementById('login-container').style.display = 'none';
+                document.getElementById('user-container').style.display = 'block';
+                document.getElementById('user-email').textContent = userEmail;
+            } else {
+                document.getElementById('login-container').style.display = 'block';
+                document.getElementById('user-container').style.display = 'none';
+            }
+        }
+
+        function logout() {
+            // Pulisci lo stato di login e aggiorna l'interfaccia
+            localStorage.removeItem('userEmail');
+            updateLoginStatus();
+            // Fai una richiesta al server per distruggere la sessione, se necessario
+        }
+
+        // Alla caricamento della pagina, aggiorna lo stato di login
+        document.addEventListener('DOMContentLoaded', updateLoginStatus);
+
+    </script>
+</body>
+
+</html>
