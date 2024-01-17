@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Database {
-	private static final String DATABASE_URL = "jdbc:oracle:thin:@10.77.188.148:1521:PRI99S1O";
+	private static final String DATABASE_URL = "jdbc:oracle:thin:@";
 	private static final String DATABASE_USER = "SYSTEST";
 	private static final String DATABASE_PASSWORD = "SYSTEST";
 
